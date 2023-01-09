@@ -1,0 +1,15 @@
+.root{
+    --dark-blue: #00204a;
+    --turquoise: #005792;
+    --light-blue: #00bbf0;
+    --mustard: #fdb44b;
+    --white: antiquewhite;
+}
+
+body {
+    font-family: arial;
+    margin: 0;
+    display: flex;
+    background-color: var(--white);
+}
+
