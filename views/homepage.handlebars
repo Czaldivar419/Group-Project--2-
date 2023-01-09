@@ -1,0 +1,20 @@
+<!-- Loop over each object in the projects array -->
+{{#each drivers as |driver| }}
+<div class="row mb-4 project">
+  <div class="col-md-5">
+    <h2>
+      <!-- Call helper function with triple brackets to render the emoji span as HTML -->
+      {{{get_emoji}}}
+      <a href="/driver/{{driver.id}}">{{driver.plate}}</a>
+    </h2>
+    <p>{{driver.make}}</p>
+    <p>{{driver.model}}</p>
+    <p>Created by {{driver.user.name}} on {{format_date driver.date_created}}</p>
+  </div>
+  <div class="col-md-7">
+    <p>
+      {{driver.incident}}
+    </p>
+  </div>
+</div>
+{{/each}}
