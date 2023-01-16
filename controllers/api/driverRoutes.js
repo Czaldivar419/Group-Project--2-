@@ -6,7 +6,6 @@ router.post('/', withAuth, async (req, res) => {
   try {
     const newDriver = await Driver.create({
       ...req.body,
-      user_id: req.session.user_id,
     });
 
     res.status(200).json(newDriver);
@@ -25,7 +24,7 @@ router.delete('/:id', withAuth, async (req, res) => {
     });
 
     if (!driverData) {
-      res.status(404).json({ message: 'No project found with this id!' });
+      res.status(404).json({ message: 'No driver found with this id!' });
       return;
     }
 
