@@ -11,3 +11,15 @@
   <div class="col-md-6 report-list">
     <h3>Current Reports:</h3>
 
+    {{#each drivers as |driver| }}
+<div class="row mb-4 project">
+  <div class="col-md-5">
+    <h2>
+      <a href="/driver/{{driver.id}}">{{driver.plate}}</a>
+    </h2>
+    <p>{{driver.make}}</p>
+    <p>{{driver.model}}</p>
+    <p>Created by {{driver.user.name}} on {{format_date date_created}}</p>
+  </div>
+  {{/each}}
+
